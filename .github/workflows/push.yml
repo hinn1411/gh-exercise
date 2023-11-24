@@ -6,12 +6,12 @@ jobs:
     steps: 
       - name: Get code
         uses: actions/checkout@v4
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with: 
-          node-version: 18
-      - name: Install dependencies 
-        run: npm ci
+      # - name: Install Node.js
+      #   uses: actions/setup-node@v4
+      #   with: 
+      #     node-version: 18
+      # - name: Install dependencies 
+      #   run: npm ci
       - name: Lint project
         run: npm run lint
       - name: Test project 
