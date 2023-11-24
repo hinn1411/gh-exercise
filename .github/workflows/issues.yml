@@ -1,0 +1,9 @@
+name: Issues Exercise
+on: issues
+jobs: 
+  dump: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump info 
+        run: echo "${{toJSON(github)}}" 
+    

@@ -1,0 +1,22 @@
+name: Push Exercise 
+on: push 
+jobs: 
+  lint: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+      - name: Install dependencies 
+        run: npm ci
+      - name: Lint project
+        run: npm run lint
+      - name: Test project 
+        run: npm run test
+      - name: Build project 
+        run: npm run build
+      - name: Deploy project 
+        run: echo "Deploying..."
